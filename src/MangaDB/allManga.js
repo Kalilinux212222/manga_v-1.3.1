@@ -1,4 +1,8 @@
 import vo1 from '../Vegabon/1.jpg';
+import vo10 from '../Vegabon/10.jpg';
+import vo11 from '../Vegabon/11.jpg';
+import vo12 from '../Vegabon/12.jpg';
+import vo13 from '../Vegabon/13.jpg';
 import vo2 from '../Vegabon/2.jpg';
 import vo3 from '../Vegabon/3.jpg';
 import vo4 from '../Vegabon/4.jpg';
@@ -7,10 +11,6 @@ import vo6 from '../Vegabon/6.jpg';
 import vo7 from '../Vegabon/7.jpg';
 import vo8 from '../Vegabon/8.jpg';
 import vo9 from '../Vegabon/9.jpg';
-import vo10 from '../Vegabon/10.jpg';
-import vo11 from '../Vegabon/11.jpg';
-import vo12 from '../Vegabon/12.jpg';
-import vo13 from '../Vegabon/13.jpg';
 import vo14 from '../Vegabon/14.jpg';
 import vo15 from '../Vegabon/15.jpg';
 import vo16 from '../Vegabon/16.jpg';
@@ -86,6 +86,40 @@ import ho13 from '../Homunculus/13.jpg'
 import ho14 from '../Homunculus/14.jpg'
 import ho15 from '../Homunculus/15.jpg'
 
+import to1 from '../Tomie/1.jpg'
+import to2 from '../Tomie/2.jpg'
+import to3 from '../Tomie/3.jpg'
+
+import ao1 from '../AOT/1.jpg';
+import ao2 from '../AOT/2.jpg';
+import ao3 from '../AOT/3.jpg';
+import ao4 from '../AOT/4.jpg';
+import ao5 from '../AOT/5.jpg';
+import ao6 from '../AOT/6.jpg';
+import ao7 from '../AOT/7.jpg';
+import ao8 from '../AOT/8.jpg';
+import ao9 from '../AOT/9.jpg';
+import ao10 from '../AOT/10.jpg';
+import ao11 from '../AOT/11.jpg';
+import ao12 from '../AOT/12.jpg';
+import ao13 from '../AOT/13.jpg';
+import ao14 from '../AOT/14.jpg';
+import ao15 from '../AOT/15.jpg';
+import ao16 from '../AOT/16.jpg';
+import ao17 from '../AOT/17.jpg';
+import ao18 from '../AOT/18.jpg';
+import ao19 from '../AOT/19.jpg';
+import ao20 from '../AOT/20.jpg';
+import ao21 from '../AOT/21.jpg';
+import ao22 from '../AOT/22.jpg';
+import ao23 from '../AOT/23.jpg';
+import ao24 from '../AOT/24.jpg';
+import ao25 from '../AOT/25.jpg';
+import ao26 from '../AOT/26.jpg';
+import ao27 from '../AOT/27.jpg';
+import ao28 from '../AOT/28.jpg';
+import ao29 from '../AOT/29.jpg';
+import ao30 from '../AOT/30.jpg';
 
 const allMangaDb = [
     { image: vo1, title: "Vegabond : Vol 1", searchKey: "Vegabond vol1" },
@@ -174,6 +208,39 @@ const allMangaDb = [
     { image: ho13, title: "Homunculus : Vol 13", searchKey: "homunculus vol13" },
     { image: ho14, title: "Homunculus : Vol 14", searchKey: "homunculus vol14" },
     { image: ho15, title: "Homunculus : Vol 15", searchKey: "homunculus vol15" },
+    {image: to1 , title: "Tomie : Vol 1", searchKey:"Tomie vol1"},
+    {image: to2 , title: "Tomie : Vol 1", searchKey:"Tomie vol2"},
+    {image: to3 , title: "Tomie : Vol 1", searchKey:"Tomie vol3"},
+    { image:ao1, title: "AOT : Vol 1", searchKey: "aot vol1" },
+{ image:ao2, title: "AOT : Vol 2", searchKey: "aot vol2" },
+{ image:ao3, title: "AOT : Vol 3", searchKey: "aot vol3" },
+{ image:ao4, title: "AOT : Vol 4", searchKey: "aot vol4" },
+{ image:ao5, title: "AOT : Vol 5", searchKey: "aot vol5" },
+{ image:ao6, title: "AOT : Vol 6", searchKey: "aot vol6" },
+{ image:ao7, title: "AOT : Vol 7", searchKey: "aot vol7" },
+{ image:ao8, title: "AOT : Vol 8", searchKey: "aot vol8" },
+{ image:ao9, title: "AOT : Vol 9", searchKey: "aot vol9" },
+{ image: ao10, title: "AOT : Vol 10", searchKey: "aot vol10" },
+{ image: ao11, title: "AOT : Vol 11", searchKey: "aot vol11" },
+{ image: ao12, title: "AOT : Vol 12", searchKey: "aot vol12" },
+{ image: ao13, title: "AOT : Vol 13", searchKey: "aot vol13" },
+{ image: ao14, title: "AOT : Vol 14", searchKey: "aot vol14" },
+{ image: ao15, title: "AOT : Vol 15", searchKey: "aot vol15" },
+{ image: ao16, title: "AOT : Vol 16", searchKey: "aot vol16" },
+{ image: ao17, title: "AOT : Vol 17", searchKey: "aot vol17" },
+{ image: ao18, title: "AOT : Vol 18", searchKey: "aot vol18" },
+{ image: ao19, title: "AOT : Vol 19", searchKey: "aot vol19" },
+{ image: ao20, title: "AOT : Vol 20", searchKey: "aot vol20" },
+{ image: ao21, title: "AOT : Vol 21", searchKey: "aot vol21" },
+{ image: ao22, title: "AOT : Vol 22", searchKey: "aot vol22" },
+{ image: ao23, title: "AOT : Vol 23", searchKey: "aot vol23" },
+{ image: ao24, title: "AOT : Vol 24", searchKey: "aot vol24" },
+{ image: ao25, title: "AOT : Vol 25", searchKey: "aot vol25" },
+{ image: ao26, title: "AOT : Vol 26", searchKey: "aot vol26" },
+{ image: ao27, title: "AOT : Vol 27", searchKey: "aot vol27" },
+{ image: ao28, title: "AOT : Vol 28", searchKey: "aot vol28" },
+{ image: ao29, title: "AOT : Vol 29", searchKey: "aot vol29" },
+{ image: ao30, title: "AOT : Vol 30", searchKey: "aot vol30" }
     
 ];
 function getRandomEntries(array, count) {
