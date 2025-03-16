@@ -201,15 +201,7 @@ const Popular = () => {
                           </ul>
                 
                       </nav>
-                      <label className="switch mx-3">
-                      <input
-                        className="dkmod"
-                        type="checkbox"
-                        checked={isDarkMode}
-                        onChange={toggleTheme}
-                      />
-                      <span className="slider"></span>
-                      </label>    
+                         
                   </div>
                 )}
       </header>
