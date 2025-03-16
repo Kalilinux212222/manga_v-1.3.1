@@ -7,6 +7,7 @@ import "../index.css";
 import allMangaDb from "../MangaDB/allManga";
 import { FaFire } from "react-icons/fa";
 import { MdRecommend } from "react-icons/md";
+import { GoDot } from "react-icons/go";
 
 const Card = ({ image, title }) => (
   <div className="card w-[100px] h-[200px] sm:w-[150px] sm:h-[250px] md:w-[180px] md:h-[300px] lg:w-[200px] lg:h-[330px] rounded-xl bg-white drop-shadow-lg m-2 font-bold text-center text-sm sm:text-md transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
@@ -132,7 +133,7 @@ const Col = () => {
 
         {/* Mobile Navigation */}
         {nav && (
-                  <div className="text-white fixed overflow-y-auto items-center z-1 w-sm h-full right-0 top-0 border-r border-r-gray-900 bg-gray-700 ease-in-out duration-600 lg:hidden ">
+                  <div className="text-white fixed overflow-y-auto items-center z-1 w-[90%] h-full right-0 top-0 border-r border-r-gray-900 bg-gray-700 ease-in-out duration-600 lg:hidden ">
                       <nav className="">
                           <h2 className="flex md:text-3xl text-3xl font-bold p-4 mx-24 text-gray-300 border-b ">Mobibeezz</h2>
                           <ul className="mx-auto pt-4">
@@ -140,64 +141,75 @@ const Col = () => {
                               <li className="text-gray-500 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"><Link to='/newest'>News</Link></li>
                               <li className="text-gray-500 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"><Link to="/col">Collections</Link></li>
                               
-                              <li className="text-gray-500 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">Series</li>
+                              <li onClick={dropdown} className="text-gray-500 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">Series</li>
+                              {drop ? 
+                                  <ul className="">
+                                      <li onClick={handleDemoP} className=" flex items-center text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"><GoDot color="white " size={20}/> Demographic</li>
+                                      {!demoP ? <ul className="hidden"></ul> : <ul>
+                                  <li className="text-gray-500 mx-10 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Shōnen</li>
+                                  <li className="text-gray-500 mx-10 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Shōjo
+                                          </li>
+                                  <li className="text-gray-500 mx-10 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Seinen
+                                  </li>
+                                  <li className="text-gray-500 mx-10 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Josei
+                                  </li>
+                                  <li className="text-gray-500 mx-10 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Kodomomuke
+                                  </li>
+                                  
+                                </ul> }
+                                      <li onClick={handlGenreP} className="flex items-center text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"><GoDot color="white " size={20}/> Genre</li>
+                                      {!genreP ? <ul>
+                                  <li className="text-gray-500 mx-10 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Action / Adventure
+                                  </li>
+                                  <li className="text-gray-500 mx-10 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Romance
+                                          </li>
+                                  <li className="text-gray-500 mx-10 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Comedy
+                                  </li>
+                                  <li className="text-gray-500 mx-10 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Drama
+                                  </li>
+                                  <li className="text-gray-500 mx-10 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Fantasy
+                                  </li>
+                                  <li className="text-gray-500 mx-10 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Horror
+                                  </li>
+                                  <li className="text-gray-500 mx-10 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Science Fiction
+                                  </li>
+                                  <li className="text-gray-500 mx-10 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Mystery / Thriller
+                                  </li>
+                                  <li className="text-gray-500 mx-10 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Sport
+                                  </li>
+                                  <li className="text-gray-500 mx-10 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Slice of Life
+                                  </li>
+                                  <li className="text-gray-500 mx-10 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Historical
+                                  </li>
+                                  <li className="text-gray-500 mx-10 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Isekai
+                                  </li>
+                                  <li className="text-gray-500 mx-10 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Supernatural
+                                  </li>
+                                  <li className="text-gray-500 mx-10 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Mecha
+                                  </li>
+                                  <li className="text-gray-500 mx-10 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Psychological
+                                  </li>
+                                  
+                                </ul> : <ul className="hidden"></ul>}
+                                  </ul>
+                              : <div className="hidden"></div>
+                              }
                               <li className="text-gray-500 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"><Link to="/popular">Popular</Link></li>
                               <li className="text-gray-500 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">
                                   <Link to="/RegistrationForm">Register</Link> {/* Link to Login */}
                               </li>
-                              <li onClick={handleDemoP} className="text-gray-500 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">
-                                  Demographic
-                              </li>
-                              {!demoP ? <ul className="hidden"></ul> : <ul>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Shōnen</li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Shōjo
-                                          </li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Seinen
-                                  </li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Josei
-                                  </li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Kodomomuke
-                                  </li>
-                                  
-                                </ul> }
-                              <li onClick={handlGenreP} className="text-gray-500 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">
-                                  Genre
-                              </li>
-                              {!genreP ? <ul>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Action / Adventure
-                                  </li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Romance
-                                          </li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Comedy
-                                  </li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Drama
-                                  </li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Fantasy
-                                  </li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Horror
-                                  </li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Science Fiction
-                                  </li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Mystery / Thriller
-                                  </li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Sport
-                                  </li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Slice of Life
-                                  </li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Historical
-                                  </li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Isekai
-                                  </li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Supernatural
-                                  </li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Mecha
-                                  </li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Psychological
-                                  </li>
-                                  
-                                </ul> : <ul className="hidden"></ul>}
                           </ul>
-                      </nav>    
+                
+                      </nav>
+                      <label className="switch mx-3">
+                      <input
+                        className="dkmod"
+                        type="checkbox"
+                        checked={isDarkMode}
+                        onChange={toggleTheme}
+                      />
+                      <span className="slider"></span>
+                      </label>    
                   </div>
                 )}
       </header>
@@ -224,7 +236,7 @@ const Col = () => {
                     <li className="p-4  hover:bg-sky-300 focus:outline-2 focus:outline-sky-300 active:bg-sky-500 rounded-2xl"><Link to="/popular">Popular</Link></li>
                     <li className="p-4  hover:bg-sky-300 focus:outline-2 focus:outline-sky-300 active:bg-sky-500 rounded-2xl"><Link to="/newest">Newest</Link></li>
                     <li className=" p-4 bg-sky-300 hover:bg-sky-300 focus:outline-2 focus:outline-sky-300 active:bg-sky-500 rounded-2xl"><Link to="/col">Collections</Link></li>
-                    <li className=" p-4 hover:bg-sky-300 focus:outline-2 focus:outline-sky-300 active:bg-sky-500 rounded-2xl flex ease-in-out duration-500" onClick={dropdown} >Series {!drop ? <IoMdArrowDropright size={20} className="mt-0.5 hidden md:flex" /> :<IoMdArrowDropleft size={20} className="hidden md:flex mt-0.5"/>}</li>
+                    <li className=" p-4 hover:bg-sky-300 focus:outline-2 focus:outline-sky-300 active:bg-sky-500 rounded-2xl hidden md:flex ease-in-out duration-500" onClick={dropdown} >Series {!drop ? <IoMdArrowDropright size={20} className="mt-0.5 hidden md:flex" /> :<IoMdArrowDropleft size={20} className="hidden md:flex mt-0.5"/>}</li>
                 </ul>
                 {drop ? <div className="hidden md:flex">
                         <ul className="mx-[-20px]">
@@ -235,47 +247,47 @@ const Col = () => {
                 }
             </div>
           {demo ? <ul className="hidden"></ul> : <ul>
-                    <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Shōnen</li>
-                    <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Shōjo
+                    <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Shōnen</li>
+                    <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Shōjo
                             </li>
-                    <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Seinen
+                    <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Seinen
                     </li>
-                    <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Josei
+                    <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Jose
                     </li>
-                    <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Kodomomuke
+                    <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Kodomomuke
                     </li>
                     
                   </ul> } 
                   {genre ? <ul className="hidden"></ul> : <ul>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Action / Adventure
+                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Action / Adventure
                                   </li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Romance
+                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Romance
                                           </li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Comedy
+                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Comedy
                                   </li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Drama
+                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Drama
                                   </li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Fantasy
+                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Fantasy
                                   </li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Horror
+                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Horror
                                   </li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Science Fiction
+                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Science Fiction
                                   </li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Mystery / Thriller
+                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Mystery / Thriller
                                   </li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Sport
+                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Sport
                                   </li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Slice of Life
+                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Slice of Life
                                   </li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Historical
+                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Historical
                                   </li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Isekai
+                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Isekai
                                   </li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Supernatural
+                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Supernatural
                                   </li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Mecha
+                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Mecha
                                   </li>
-                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400">- Psychological
+                                  <li className="text-gray-500 mx-3 my-1 p-4 rounded-2xl hover:bg-gray-300 focus:outline-2 focus:outline-offset-2  active:bg-gray-400"> Psychological
                                   </li>
                                   
                                 </ul>}                   
@@ -283,7 +295,7 @@ const Col = () => {
       {/* Card */}             
       <div className="flex overflow-x-auto justify-center p-2 sm:p-4">
         {filteredResults.length > 0 ? (
-          <div className="flex justify-center gap-2 sm:gap-4">
+          <div className="flex justify-cent>">
             {filteredResults.map((item) => (
               <Card key={item.id} image={item.image} title={item.title} />
             ))}
